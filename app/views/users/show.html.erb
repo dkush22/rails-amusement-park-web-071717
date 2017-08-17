@@ -1,0 +1,17 @@
+<label>Name:</label>
+<h2><%=@user.name%></h2> 
+<label>Tickets:</label>
+<h2><%=@user.tickets%></h2> 
+<label>Mood:</label>
+<h2><%=@user.mood%></h2> 
+<label>Height:</label>
+<h2><%=@user.height%></h2> 
+<label>ADMIN:</label>
+<h2><%=@user.admin%></h2> 
+
+<% if flash[:message] %>
+<%=flash[:message]%>
+<% end %>
+
+<%= link_to "Log Out", logout_path, method: 'post', id: "Log Out" %>
+<div><%= link_to "See attractions", attractions_path%></div>
